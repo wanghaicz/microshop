@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="content">
+    <view class="slide">
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500">
+        <view wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image mode="aspectFill" src="{{item}}" lazy-load="true" />
+          </swiper-item>
+        </view>
+      </swiper>
+    </view>
+  </view>
+</view>

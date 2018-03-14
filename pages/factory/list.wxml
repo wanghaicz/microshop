@@ -1,0 +1,20 @@
+<view class="container">
+	<view class="topbar">
+		<text>电厂列表</text>
+	</view>
+
+	<view wx:if="{{nologin}}" class="nologin">
+		<text>登录后查看电厂</text>
+		<view>
+	        <button size="mini" type="primary" bindtap="login">立即登录</button>
+	    </view>
+	</view>
+
+	<view wx:else class="content">
+	  	<view class="li" wx:for="{{factoryList}}" data-id="{{item.id}}" bindtap="checkFactory">
+	  		<view class="name">{{item.company_name}}</view>
+	  		<view class="addr">{{item.town}}{{item.address}}</view>
+	  	</view>
+	</view>
+
+</view>

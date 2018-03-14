@@ -1,0 +1,65 @@
+.content {
+	width: 100%;
+	overflow: hidden;
+}
+
+.content .li {
+	position: relative;
+	margin-top: 10px;
+	background: #fff;
+	display: flex;
+    justify-content: flex-start;
+}
+
+.content .li>.addr {
+	width: 100%;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	padding: 10px;
+}
+
+.content .li>.del {
+	position: absolute;
+	top: 0px;
+	right: -60px;
+	width: 60px;
+	height: 100%;
+	text-align: center;
+	background: #ff3a32;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.bottomBar {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border-top: 1px solid #dcdcdc;
+	background: #fff;
+	z-index: 10000;
+}
+
+.bottomBar button {
+	width: 96%;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px auto;
+}
+
+.nologin {
+	margin-top: 60px;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.nologin text {
+	font-size: 0.8em;
+	color: #7a7b7f;
+	margin-bottom: 10px;
+}

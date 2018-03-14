@@ -1,0 +1,24 @@
+page {
+    flex-direction: row;
+}
+
+.container {
+    width: 100%;
+}
+
+.container .content {
+    height: 100%;
+}
+
+.container .content .slide {
+    height: 100%;
+}
+
+.container .content .slide swiper {
+    height: 100%;
+}
+
+.container .content .slide swiper image {
+    width: 100%;
+    height: 100%;
+}

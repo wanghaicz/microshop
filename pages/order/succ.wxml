@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="topbar">
+    <text>下单成功</text>
+  </view>
+
+  <view class="content">
+    <view class="succ-icon">
+      <icon type="success_no_circle" size="80" />
+    </view>
+    <view class="succ-info">
+      <text>恭喜您已成功下单！请静候司机上门提货。</text>
+    </view>
+  </view>
+  
+</view>

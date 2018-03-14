@@ -1,0 +1,24 @@
+<view class="container">
+	<view class="topbar">
+		<text>修改密码</text>
+	</view>
+
+	<view class="content">
+		<view class="li">
+			<text decode="true">&nbsp;旧&nbsp;密&nbsp;码</text>
+			<input password="true" bindinput="pwdInput" />
+		</view>
+
+		<view class="li">
+			<text decode="true">&nbsp;新&nbsp;密&nbsp;码</text>
+			<input password="true" bindinput="newInput" />
+		</view>
+
+		<view class="li">
+			<text>确认密码</text>
+			<input password="true" bindinput="confirmInput" />
+		</view>
+
+		<button type="primary" bindtap="savePwd">保存新密码</button>
+	</view>
+</view>

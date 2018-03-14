@@ -1,0 +1,25 @@
+.content .li {
+	margin-top: 10px;
+	padding: 5px 10px 5px 10px;
+	background: #fff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	display: flex;
+    justify-content: space-between;
+}
+
+.content .li.active {
+	border-top: 1px solid #1aac19;
+	border-bottom: 1px solid #1aac19;
+}
+
+.content .li input {
+	width: 80%;
+}
+
+.content button {
+	margin-top: 30px;
+	width: 96%;
+	height: 40px;
+	line-height: 40px;
+}

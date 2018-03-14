@@ -1,0 +1,16 @@
+<view class="container">
+	<view class="topbar">
+		<input class="search" confirm-type="search" placeholder="搜索燃料" placeholder-class="search-placeholder" bindconfirm="searchConfirm" bindinput="searchInput" value="{{searchValue}}" />
+	</view>
+
+	<view class="content">
+	 	<view class="list">
+			<view class="item-row" wx:for="{{goodsList}}">
+				<view class="item-column" wx:for="{{item}}" data-id="{{item.id}}" bindtap="goDetail">
+					<text wx:if="{{item.id>0}}" class="active">{{item.name}}</text>
+					<text wx:else></text>
+				</view>
+			</view>
+	    </view>
+	</view>
+</view>

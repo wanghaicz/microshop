@@ -1,0 +1,89 @@
+.content {
+	margin-bottom: 61px;
+}
+
+.content .info {
+	padding: 5px;
+}
+
+.content .info .title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.content .li {
+	margin-bottom: 10px;
+	padding: 5px 10px 5px 10px;
+	background: #fff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	display: flex;
+    justify-content: space-between;
+}
+
+.content .li>view {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.content .li.quality button {
+	margin-left: 5px;
+}
+
+.content .li.quantity>view text,
+.content .li.weight>view text,
+.content .li.volume>view text {
+	display: inline-block;
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	border: 1px solid #dcdcdc;
+}
+
+.content .li.quantity>view text:nth-child(1),
+.content .li.weight>view text:nth-child(1),
+.content .li.volume>view text:nth-child(1) {
+	border-radius: 5px 0px 0px 5px;
+}
+
+.content .li.quantity>view text:nth-child(3),
+.content .li.weight>view text:nth-child(3),
+.content .li.volume>view text:nth-child(3) {
+	border-radius: 0px 5px 5px 0px;
+}
+
+.content .li.addr>text {
+	display: inline-block;
+	margin-right: 10px;
+	white-space: nowrap;
+}
+
+.content .li.quantity>view input,
+.content .li.weight>view input,
+.content .li.volume>view input {
+	width: 4em;
+	height: 1.5em;
+	text-align: center;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	background: #efefef;
+}
+
+.bottomBar {
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border-top: 1px solid #dcdcdc;
+	background: #fff;
+	z-index: 10000;
+}
+
+.bottomBar button {
+	width: 96%;
+	height: 40px;
+	line-height: 40px;
+	margin: 10px auto;
+}

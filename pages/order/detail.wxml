@@ -1,0 +1,81 @@
+<view class="container">
+  <view class="topbar">
+    <text>订单详情</text>
+  </view>
+  
+  <view class="content">
+    <view class="section">
+      <text class="title">订单信息</text>
+      <view class="li">
+        <text decode="true">&nbsp;订&nbsp;单&nbsp;号：</text>
+        <text>{{orderData.erp_number}}</text>
+      </view>
+      <view class="li">
+        <text>燃料名称：</text>
+        <text>{{orderData.product_name}}</text>
+      </view>
+      <view class="li">
+        <text decode="true">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</text>
+        <text>{{orderData.quantity}}{{orderData.unit}}</text>
+      </view>
+      <view class="li">
+        <text decode="true">总&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重：</text>
+        <text>{{orderData.weight}}吨</text>
+      </view>
+      <view class="li">
+        <text decode="true">&nbsp;总&nbsp;体&nbsp;积：</text>
+        <text>{{orderData.volume}}立方米</text>
+      </view>
+      <!-- <view class="li">
+        <text decode="true">场地最大可进车型：</text>
+        <text wx:if="{{orderData.truck_length}}">{{orderData.truck_length}}米</text>
+      </view> -->
+      <view class="li">
+        <text>提货地址：</text>
+        <text>{{orderData.ship_from_town}}{{orderData.ship_from_address}}</text>
+      </view>
+      <view class="li">
+        <text decode="true">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;厂：</text>
+        <text>{{orderData.ship_to_company_name}}</text>
+      </view>
+      <view class="li">
+        <text>下单时间：</text>
+        <text>{{orderData.created_at}}</text>
+      </view>
+      <view class="li">
+        <text>预计提货时间：</text>
+        <text>{{orderData.pickup_date}}</text>
+      </view>
+      <view wx:if="{{orderData.cancel_reason}}" class="li">
+        <text>取消原因：</text>
+        <text>{{orderData.cancel_reason}}</text>
+      </view>
+    </view>
+    <view wx:if="{{orderData.dockAppointment}}" class="section">
+      <text class="title">预约信息</text>
+      <view class="li">
+        <text decode="true">&nbsp;车&nbsp;牌&nbsp;号：</text>
+        <text>{{orderData.dockAppointment.truckPlate}}</text>
+      </view>
+      <view class="li">
+        <text decode="true">司机姓名：</text>
+        <text>{{orderData.dockAppointment.driverName}}</text>
+      </view>
+      <view class="li">
+        <text decode="true">司机电话：</text>
+        <text>{{orderData.dockAppointment.driverMobile}}</text>
+      </view>
+      <view class="li">
+        <text decode="true">预计到达时间：</text>
+        <text>{{orderData.dockAppointment.expectedArrivalTime}}</text>
+      </view>
+    </view>
+    <view wx:if="{{orderData.orderEvents}}" class="section">
+      <text class="title">节点信息</text>
+      <view class="li" wx:for="{{orderData.orderEvents}}">
+        <text decode="true">{{item.time}}&nbsp;&nbsp;</text>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

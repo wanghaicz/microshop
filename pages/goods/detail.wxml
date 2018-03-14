@@ -1,0 +1,109 @@
+<view class="container">
+	<view class="topbar">
+		<text>{{goodsData.name}}</text>
+	</view>
+
+	<view class="content">
+	  	<view class="info">
+			<view class="title">{{goodsData.name}}</view>
+		</view>
+
+		<view class="li quality">
+	  		<text>品质</text>
+	  		<view>
+	  			<button size="mini" type="primary" plain="{{quality.excellent}}" data-quality="excellent" bindtap="checkQuantity">优质</button>
+	  			<button size="mini" type="primary" plain="{{quality.good}}" data-quality="good" bindtap="checkQuantity">良好</button>
+	  			<button size="mini" type="primary" plain="{{quality.unknown}}" data-quality="unknown" bindtap="checkQuantity">不详</button>
+	  		</view>
+	  	</view>
+
+	  	<view class="li weight">
+	  		<text>重量(吨)</text>
+	  		<view>
+	  			<text bindtap="weightMinus">-</text>
+	  			<input type="digit" value="{{weight}}" bindinput="weightInput" />
+	  			<text bindtap="weightPlus">+</text>
+	  		</view>
+	  	</view>
+
+	  	<view class="li quantity">
+	  		<text>数量({{goodsData.unit}})</text>
+	  		<view>
+	  			<text bindtap="quantityMinus">-</text>
+	  			<input type="digit" value="{{quantity}}" bindinput="quantityInput" />
+	  			<text bindtap="quantityPlus">+</text>
+	  		</view>
+	  	</view>
+
+	  	<view class="li volume">
+	  		<text>体积(立方米)</text>
+	  		<view>
+	  			<text bindtap="volumeMinus">-</text>
+	  			<input type="digit" value="{{volume}}" bindinput="volumeInput" />
+	  			<text bindtap="volumePlus">+</text>
+	  		</view>
+	  	</view>
+
+	  	<!-- <view class="li length" bindtap="checkLength">
+	  		<text>场地最大可进车型</text>
+	  		<view wx:if="{{length}}" data-length="{{length}}">
+	  			<text>{{length}}米</text>
+	  		</view>
+	  		<view wx:else>
+	  			<text style="color:#dcdcdc;">点击选择场地最大可进车型</text>
+	  		</view>
+	  	</view> -->
+
+	  	<view class="li addr" bindtap="checkAddr">
+	  		<text>提货地址</text>
+	  		<view wx:if="{{addrData.id}}" data-addr_id="{{addrData.id}}">
+	  			<text>{{addrData.addr}}</text>
+	  		</view>
+	  		<view wx:else>
+	  			<text style="color:#dcdcdc;">点击选择提货地址</text>
+	  		</view>
+	  	</view>
+
+	  	<view class="li factory" bindtap="checkFactory">
+	  		<text>电厂</text>
+	  		<view wx:if="{{factoryData.id}}" data-addr_id="{{factoryData.id}}">
+	  			<text>{{factoryData.company_name}}</text>
+	  		</view>
+	  		<view wx:else>
+	  			<text style="color:#dcdcdc;">点击选择电厂</text>
+	  		</view>
+	  	</view>
+
+	  	<!-- <view class="li date">
+	  		<text>送货日期</text>
+	  		<picker mode="date" bindchange="deliveryDateChange" value="{{deliveryDate}}">
+				<text wx:if="{{deliveryDate}}">{{deliveryDate}}</text>
+				<text wx:else style="color:#dcdcdc;">点击选择送货日期</text>
+			</picker>
+	  	</view> -->
+
+	  	<view class="li date">
+	  		<text>预计提货日期</text>
+	  		<view>
+		  		<picker mode="date" bindchange="pickupDateChange" value="{{pickupDate}}">
+					<text wx:if="{{pickupDate}}">{{pickupDate}}</text>
+					<text wx:else style="color:#dcdcdc;">点击选择提货日期</text>
+				</picker>
+			</view>
+	  	</view>
+
+	  	<view class="li time">
+	  		<text>预计提货时间</text>
+	  		<view>
+				<picker mode="time" bindchange="pickupTimeChange" value="{{pickupTime}}">
+					<text wx:if="{{pickupTime}}">{{pickupTime}}</text>
+					<text wx:else style="color:#dcdcdc;">点击选择提货时间</text>
+				</picker>
+			</view>
+	  	</view>
+	</view>
+
+	<view class="bottomBar">
+		<button type="primary" bindtap="postOrder">立即下单</button>
+	</view>
+</view>

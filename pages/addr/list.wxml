@@ -1,0 +1,26 @@
+<view class="container">
+	<view class="topbar">
+		<text>提货地址列表</text>
+	</view>
+
+	<view wx:if="{{nologin}}" class="nologin">
+		<text>登录后查看/修改地址</text>
+		<view>
+	        <button size="mini" type="primary" bindtap="login">立即登录</button>
+	    </view>
+	</view>
+
+	<view wx:else class="content">
+	  	<view class="li" wx:for="{{addrList}}" data-id="{{item.id}}" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}px">
+	  		<view class="addr" data-id="{{item.id}}" bindtap="checkAddr">{{item.addr}}</view>
+	  		<view class="del" data-id="{{item.id}}" bindtap="delAddr">
+	  			<text>删除</text>
+	  		</view>
+	  	</view>
+	</view>
+
+	<view wx:if="{{!nologin}}" class="bottomBar">
+		<button type="primary" bindtap="addAddr">新增提货地址</button>
+	</view>
+
+</view>

@@ -1,0 +1,71 @@
+.content .li {
+	margin-top: 10px;
+	padding: 5px 0px 5px 10px;
+	background: #fff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	display: flex;
+    justify-content: space-between;
+}
+
+.content .avatar {
+	height: 70px;
+	position: relative;
+}
+
+.content .avatar image {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.content .avatar view {
+	position: absolute;
+	height: 70%;
+	top: 15px;
+	left: 90px;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-betwwen;
+}
+
+.content .avatar view text {
+	flex: 1;
+}
+
+.content .avatar view text:nth-child(2) {
+	font-size: 0.8em;
+}
+
+.content .nologin {
+	font-size: 1.5em;
+	height: 50px;
+	line-height: 50px;
+}
+
+.content .addr,
+.content .safe {
+	height: 30px;
+	line-height: 30px;
+}
+
+.content .addr image,
+.content .safe image,
+.content .nologin image {
+	width: 40px;
+	height: 40px;
+	margin-top: -5px;
+}
+
+.content .nologin image {
+	margin-top: 5px;
+}
+
+.logout-btn {
+	margin-top: 30px;
+	width: 96%;
+	height: 40px;
+	line-height: 40px;
+}

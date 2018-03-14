@@ -1,0 +1,54 @@
+<view class="container">
+	<view class="topbar">
+		<text>请选择订单取消原因</text>
+	</view>
+
+	<view class="content">
+		<view wx:if="{{type == 1}}" class="li active">
+			<text decode="true">订单信息错误</text>
+		</view>
+		<view wx:else class="li" data-type="1" bindtap="checkType">
+			<text decode="true">订单信息错误</text>
+		</view>
+
+		<view wx:if="{{type == 2}}" class="li active">
+			<text decode="true">停电</text>
+		</view>
+		<view wx:else class="li" data-type="2" bindtap="checkType">
+			<text decode="true">停电</text>
+		</view>
+
+		<view wx:if="{{type == 3}}" class="li active">
+			<text decode="true">设备故障</text>
+		</view>
+		<view wx:else class="li" data-type="3" bindtap="checkType">
+			<text decode="true">设备故障</text>
+		</view>
+
+		<view wx:if="{{type == 4}}" class="li active">
+			<text decode="true">天气原因</text>
+		</view>
+		<view wx:else class="li" data-type="4" bindtap="checkType">
+			<text decode="true">天气原因</text>
+		</view>
+
+		<view wx:if="{{type == 5}}" class="li active">
+			<text decode="true">改送其他地方</text>
+		</view>
+		<view wx:else class="li" data-type="5" bindtap="checkType">
+			<text decode="true">改送其他地方</text>
+		</view>
+
+		<view wx:if="{{type == 6}}" class="li active">
+			<text decode="true">其他</text>
+			<input placeholder="请填写订单取消原因" bindinput="reasonInput" />
+		</view>
+		<view wx:else class="li" data-type="6" bindtap="checkType">
+			<text decode="true">其他</text>
+			<input placeholder="请填写订单取消原因" bindinput="reasonInput" />
+		</view>
+
+		<button type="primary" bindtap="submit">确认取消</button>
+	</view>
+
+</view>

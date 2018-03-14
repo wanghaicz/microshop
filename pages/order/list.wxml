@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="topbar">
+    <text>我的订单</text>
+  </view>
+
+  <view wx:if="{{nologin}}" class="nologin">
+      <text>登录后查看订单</text>
+      <view>
+        <button size="mini" type="primary" bindtap="login">立即登录</button>
+      </view>
+  </view>
+
+  <view wx:else class="content">
+  	<view class="order-status">
+  		<view id="todo" class="{{orderStatus.todo}}" bindtap="checkStatus">未处理</view>
+  		<view id="doing" class="{{orderStatus.doing}}" bindtap="checkStatus">处理中</view>
+  		<view id="done" class="{{orderStatus.done}}" bindtap="checkStatus">已完成</view>
+      <view id="cancel" class="{{orderStatus.cancel}}" bindtap="checkStatus">已取消</view>
+  	</view>
+
+  	<view class="order-item" wx:for="{{orderData}}">
+  		<view class="item-top">
+  			<text>{{item.erp_number}}</text>
+  			<text>{{item.created_at}}</text>
+  		</view>
+  		<view class="item-middle">
+  			<text>{{item.product_name}}</text>
+  		</view>
+  		<view class="item-bottom">
+  			<text>重量:{{item.weight}}吨</text>
+  			<view>
+  				<button wx:if="{{item.status == 0 || item.status == 1}}" size="mini" data-order_bn="{{item.erp_number}}" bindtap="cancel">取消订单</button>
+          <button size="mini" data-order_bn="{{item.erp_number}}" bindtap="detail">查看详情</button>
+  			</view>
+  		</view>
+  	</view>
+  </view>
+  
+</view>

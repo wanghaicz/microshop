@@ -1,0 +1,16 @@
+<view class="container">
+	<view class="topbar">
+		<text>场地最大可进车型</text>
+	</view>
+
+	<view class="content">
+	  	<view class="li" data-length="4.2" bindtap="checkLength">4.2米</view>
+	  	<view class="li" data-length="6.8" bindtap="checkLength">6.8米</view>
+	  	<view class="li" data-length="7.2" bindtap="checkLength">7.2米</view>
+	  	<view class="li" data-length="8.6" bindtap="checkLength">8.6米</view>
+	  	<view class="li" data-length="9.6" bindtap="checkLength">9.6米</view>
+	  	<view class="li" data-length="13.5" bindtap="checkLength">13.5米</view>
+	  	<view class="li" data-length="17.5" bindtap="checkLength">17.5米</view>
+	</view>
+
+</view>

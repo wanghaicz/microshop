@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goods/list",
+    "pages/goods/detail",
+    "pages/order/list",
+    "pages/order/succ",
+    "pages/order/detail",
+    "pages/order/cancel",
+    "pages/member/index",
+    "pages/member/pwd",
+    "pages/addr/list",
+    "pages/addr/new",
+    "pages/passport/login",
+    "pages/factory/list"
+  ],
+  "window": {
+    "navigationBarTitleText": "KD订单助手",
+    "backgroundColor": "#f0eff5",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color" : "#7a7b7f",
+    "selectedColor" : "#1aac19",
+    "navigationBarBackgroundColor": "#f9f9f9",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "resources/index.png",
+        "selectedIconPath": "resources/index1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/goods/list",
+        "iconPath": "resources/list.png",
+        "selectedIconPath": "resources/list1.png",
+        "text": "料库"
+      },
+      {
+        "pagePath": "pages/order/list",
+        "iconPath": "resources/order.png",
+        "selectedIconPath": "resources/order1.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/member/index",
+        "iconPath": "resources/member.png",
+        "selectedIconPath": "resources/member1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

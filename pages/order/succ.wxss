@@ -1,0 +1,8 @@
+.succ-icon {
+	margin-top: 60px;
+	text-align: center;
+}
+
+.succ-info {
+	padding: 20px 10px;
+}

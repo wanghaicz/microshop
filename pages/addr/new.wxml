@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="topbar">
+		<text>新增地址</text>
+	</view>
+
+	<view class="content">
+		<view class="li">
+			<text decode="true">邮政编码</text>
+			<input bindinput="postcodeInput" />
+		</view>
+
+		<view class="li">
+			<text decode="true">省&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市</text>
+			<input bindinput="townInput" />
+		</view>
+
+		<view class="li">
+			<text decode="true">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</text>
+			<input bindinput="addressInput" />
+		</view>
+
+		<button type="primary" bindtap="saveAddr">保存地址</button>
+	</view>
+
+</view>

@@ -1,0 +1,85 @@
+.content>view {
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	background: #fff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	display: flex;
+    justify-content: space-between;
+}
+
+.content>view:nth-child(1) {
+	margin-top: 10px;
+}
+
+.order-status {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.order-status view {
+	flex: 1;
+	text-align: center;
+	border-left: 1px solid #dcdcdc;
+}
+
+.order-status view:nth-child(1) {
+	border-left: none;
+}
+
+.order-status view.active {
+	background: #1aac19;
+	color: #fff;
+}
+
+.order-item {
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+}
+
+.order-item .item-top {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.order-item .item-middle {
+	display: flex;
+	justify-content: flex-start;
+	padding: 5px 0px;
+}
+
+.order-item .item-middle text {
+	padding-left: 10px;
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	font-size: 1.6em;
+}
+
+.order-item .item-bottom {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #dcdcdc;
+	padding-top: 5px;
+}
+
+.order-item .item-bottom button {
+	margin-left: 5px;
+}
+
+.nologin {
+	margin-top: 60px;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.nologin text {
+	font-size: 0.8em;
+	color: #7a7b7f;
+	margin-bottom: 10px;
+}

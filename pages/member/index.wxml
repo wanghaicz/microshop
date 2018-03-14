@@ -1,0 +1,32 @@
+<view class="container">
+	<view class="topbar">
+		<text>个人中心</text>
+	</view>
+
+	<view class="content">
+	  	<view wx:if="{{nologin}}" class="li nologin" bindtap="login">
+	  		<text>登录</text>
+	  		<image src="../../resources/next.png" />
+	  	</view>
+	  	<view wx:else class="li avatar">
+	  		<image mode="aspectFit" src="{{avatarUrl}}" />
+	  		<image src="../../resources/mask.png" />
+	  		<view>
+	  			<text>{{name}}</text>
+	  			<text>{{mobile}}</text>
+	  		</view>
+	  	</view>
+
+	  	<view class="li addr" bindtap="manageAddr">
+	  		<text>提货地址管理</text>
+	  		<image src="../../resources/next.png" />
+	  	</view>
+
+	  	<view class="li safe" bindtap="modifyPwd">
+	  		<text>账户与安全</text>
+	  		<image src="../../resources/next.png" />
+	  	</view>
+
+		<button wx:if="{{!nologin}}" type="warn" class="logout-btn" bindtap="logout">退出登录</button>
+	</view>
+</view>

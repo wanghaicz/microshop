@@ -1,0 +1,26 @@
+.content .li {
+	margin-top: 10px;
+	padding: 5px 10px;
+	background: #fff;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	display: flex;
+    justify-content: space-start;
+}
+
+.content .li>text {
+	display: inline-block;
+	margin-right: 10px;
+	white-space: nowrap;
+}
+
+.content .li>input {
+	flex: 1;
+}
+
+.content button {
+	margin-top: 30px;
+	width: 96%;
+	height: 40px;
+	line-height: 40px;
+}

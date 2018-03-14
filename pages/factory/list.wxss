@@ -1,0 +1,27 @@
+.content {
+	width: 100%;
+	overflow: hidden;
+}
+
+.content .li {
+	position: relative;
+	margin-top: 10px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content .li>.name {
+	width: 100%;
+	border-top: 1px solid #dcdcdc;
+	padding: 10px;
+}
+
+.content .li>.addr {
+	width: 100%;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+	padding: 5px;
+	font-size: 0.8em;
+}
